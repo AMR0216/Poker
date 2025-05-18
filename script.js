@@ -89,6 +89,7 @@ function renderTables() {
     const tableLayout = document.createElement("div");
     tableLayout.className = "poker-table";
 
+    // Los asientos se crean en orden de 1 a 10 siguiendo el CSS (de las agujas del reloj)
     for (let i = 0; i < 10; i++) {
       const seat = document.createElement("div");
       seat.className = "seat";
@@ -96,10 +97,10 @@ function renderTables() {
         const playerBox = document.createElement("div");
         playerBox.className = "player-box";
         playerBox.innerHTML = `
-        ${table[i]}
-        <div class="player-controls">
-            <button class="btn btn-delete" onclick="removeFromTable(${idx}, ${i})">🗑️</button>
-        </div>`;
+          ${i + 1}. ${table[i]}  <!-- número correlativo del asiento -->
+          <div class="player-controls">
+              <button class="btn btn-delete" onclick="removeFromTable(${idx}, ${i})">🗑️</button>
+          </div>`;
         seat.appendChild(playerBox);
       } else {
         createPlayerSelector(seat, idx, i);
@@ -112,8 +113,9 @@ function renderTables() {
   });
 }
 
+
 function removeFromTable(tableIndex, seatIndex) {
-  const removedPlayer = tableAssignments[tableIndex][seatIndex];
+  // Cambiar el jugador por null para mantener la posición
   tableAssignments[tableIndex][seatIndex] = null;
   renderTables();
 }
