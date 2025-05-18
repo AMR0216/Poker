@@ -1,0 +1,139 @@
+    body {
+        background-color: #8b0000; /* Rojo oscuro tipo PokerStars */
+        background-size: cover;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .card {
+        background-color: rgba(255, 255, 255, 0.95);
+        border: none;
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+    
+    h1.display-3 {
+        font-size: 4rem;
+        font-weight: 900;
+        color: black;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 5px rgba(255,255,255,0.4);
+    }
+    
+    h2, h4 {
+        color: black;
+        text-shadow: 1px 1px 2px white;
+    }
+    .poker-table {
+        background-color: #2e2e2e;
+        border-radius: 50% / 45%;
+        padding: 30px;
+        margin: 20px auto;
+        width: 100%;
+        max-width: 1000px;
+        aspect-ratio: 5 / 4; /* forma más ovalada */
+        position: relative;
+        border: 5px solid #000;
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      }
+
+      #tables-container {
+        overflow-x: hidden;
+        padding: 20px 10px;
+      }
+      
+      @media (max-width: 768px) {
+        .poker-table {
+          max-width: 95%;
+          aspect-ratio: 2 / 1;
+        }
+      }
+
+    #tables-container .col-md-4 {
+        flex: 0 0 32%; /* Ajusta el tamaño de las mesas */
+        display: flex;
+        justify-content: center;
+    }
+
+    #tables-container .row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+  .seat {
+    position: absolute;
+    width: 100px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .seat button {
+    font-size: 0.8rem;
+  }
+  
+  .seat input,
+  .seat select {
+    width: 80%;
+    margin: 5px auto;
+  }
+  
+  /* Asientos superiores */
+.seat:nth-child(1)  { top: 2%;  left: 50%; transform: translateX(-50%); }     /* centro superior */
+.seat:nth-child(2)  { top: 10%; left: 20%; transform: translateX(-50%); }     /* arriba izquierda */
+.seat:nth-child(3)  { top: 10%; left: 80%; transform: translateX(-50%); }     /* arriba derecha */
+
+/* Lado derecho */
+.seat:nth-child(4)  { top: 40%; left: 98%; transform: translate(-100%, -50%); } /* medio arriba derecho */
+.seat:nth-child(5)  { top: 60%; left: 98%; transform: translate(-100%, -50%); } /* medio abajo derecho */
+
+/* Asientos inferiores */
+.seat:nth-child(6)  { bottom: 2%; left: 50%; transform: translateX(-50%); }   /* centro inferior */
+.seat:nth-child(7)  { bottom: 10%; left: 20%; transform: translateX(-50%); }  /* abajo izquierda */
+.seat:nth-child(8)  { bottom: 10%; left: 80%; transform: translateX(-50%); }  /* abajo derecha */
+
+/* Lado izquierdo */
+.seat:nth-child(9)  { top: 60%; left: 2%; transform: translateY(-50%); }      /* medio abajo izquierdo */
+.seat:nth-child(10) { top: 40%; left: 2%; transform: translateY(-50%); }      /* medio arriba izquierdo */
+
+  
+  #tables-container h5 {
+    font-weight: bold;
+    color: white;
+  }
+  .player-box {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    padding: 6px 10px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.9rem;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  }
+  
+  .player-controls {
+    margin-top: 6px;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+  }
+  
+  .btn-delete,
+  .btn-add {
+    border: none;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .btn-delete {
+    background-color: #b00000;
+  }
+  
+  .btn-add {
+    background-color: #009900;
+  }
