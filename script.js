@@ -1,4 +1,33 @@
-let participants = [];
+let participants = [
+  "Manolo",
+  "Juan",
+  "Suso",
+  "Víctor",
+  "Eloy",
+  "Nando",
+  "Melo",
+  "Norberto",
+  "Ramon",
+  "Daniel",
+  "Antonio",
+  "Jesé",
+  "Ruben",
+  "Esteban",
+  "Rene",
+  "Ray",
+  "Octavio",
+  "David",
+  "Carlos",
+  "Camilo",
+  "Jorge",
+  "Jorge 2",
+  "Héctor",
+  "Gustavo",
+  "Tomas",
+  "Egonay",
+  "Esteban",
+  "Raúl"
+];
 let tableAssignments = []; // Nueva estructura para mantener las mesas
 
 function addParticipant() {
@@ -17,7 +46,7 @@ function updateParticipantList() {
   participants.forEach((name, index) => {
     const item = document.createElement("li");
     item.className = "list-group-item d-flex justify-content-between align-items-center";
-    item.innerText = name;
+    item.innerText = `${index + 1}. ${name}`;
     const removeBtn = document.createElement("button");
     removeBtn.className = "btn btn-danger btn-sm";
     removeBtn.innerText = "X";
@@ -145,3 +174,5 @@ function createPlayerSelector(seatElement, tableIndex, seatIndex) {
 
   seatElement.appendChild(select);
 }
+
+updateParticipantList();
