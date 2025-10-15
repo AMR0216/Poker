@@ -26,7 +26,12 @@ let participants = [
   "Tomas",
   "Egonay",
   "Esteban",
-  "Raúl"
+  "Raúl",
+  "Octavio 2",
+  "Mario",
+  "Fran",
+  "Sergio",
+  "Jaime"
 ];
 let tableAssignments = []; // Nueva estructura para mantener las mesas
 
